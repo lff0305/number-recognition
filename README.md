@@ -6,7 +6,7 @@ This test project is based on the document of Neural Network for Recognition of 
 
 In the project, a trained weights set (60000_9.nn) is provided, which is trained from the THE MNIST DATABASE of handwritten digits(http://yann.lecun.com/exdb/mnist/index.html).
 
-For the test set (10000 test case) from this website, it can get a error rate of 4.26%
+For the test set (10000 test case) from this website, it can get a error rate of <b>4.26%</b>
 
 The following screenshot shows the verify UI:
 
