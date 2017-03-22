@@ -10,7 +10,7 @@ For the test set (10000 test case) from this website, it can get a error rate of
 
 The following screenshot shows the verify UI:
 
-![image](http://number-regnization.googlecode.com/files/Snap5.jpg)
+![image](https://github.com/lff0305/number-recognition/blob/master/Snap5.jpg)
 
 License
 
