@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="BP">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="D:/Develope/eclipse36"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+
+    <target name="init" depends="clean">
+        <mkdir dir="dist"/>
+        <mkdir dir="dist/bin"/>
+    </target>
+    <target name="clean">
+        <delete dir="dist"/>
+    </target>
+    <target depends="init" name="compile">
+        <javac debug="true" debuglevel="${debuglevel}" 
+        	   destdir="dist/bin" source="1.6" target="1.6"
+        	   srcdir="src"
+        	   excludes="utility\TestMatrix.java"
+        	   optimize="true"
+        	>
+        </javac>
+    </target>
+    
+	<target name="jar" depends="compile">
+	   <jar destfile="dist/cn.jar"
+		    basedir="dist/bin"
+		   includes="**/*.*"
+		   />
+		<delete dir="dist/bin"/>
+	</target>
+	<target name="copy" depends="jar">
+		<copy todir="dist">
+			 <fileset dir=".">
+			 		<include name="60000_9.nn"/>
+			 		<include name="run.bat"/>
+			 </fileset>
+		</copy>
+		<unzip src="train_and_test.zip" dest="dist/"/>
+	</target>
+	<target name="build" depends="compile, jar, copy">
+	</target>
+</project>
