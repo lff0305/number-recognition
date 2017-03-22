@@ -1,5 +1,7 @@
 # number-recognition
 
+Merged from my googlecode repo.
+
 A Java Number Recognition Program based on <b>Convolutional Neural Network</b>
 
 This test project is based on the document of Neural Network for Recognition of Handwritten Digits By Mike O'Neill (http://www.codeproject.com/KB/library/NeuralNetRecognition.aspx).
